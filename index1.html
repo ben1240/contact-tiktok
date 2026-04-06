@@ -38,11 +38,16 @@
         </a>
     </div>
 
-    <script>
+        <script>
+    // On attend que la page soit totalement chargée
+    window.onload = function() {
+        // Petite pause de 500ms pour laisser le temps au navigateur de comprendre
         setTimeout(function() {
-            window.location.href = "https://api.whatsapp.com/send?phone=22870492678&text=Bonjour,%20je%20viens%20de%20TikTok";
-        }, 2000);
-    </script>
+            // On utilise "replace" pour éviter que l'utilisateur ne reste bloqué en boucle
+            window.location.replace("https://api.whatsapp.com/send?phone=228XXXXXXX&text=Bonjour");
+        }, 500);
+    };
+</script>
 
 </body>
 </html>
